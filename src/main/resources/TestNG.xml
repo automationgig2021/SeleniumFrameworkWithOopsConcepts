@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="My Demo Test Suite">
+	<listeners>
+		<listener class-name="com.abc.listeners.SuiteListener" />
+		<listener class-name="com.abc.listeners.TestListener" />
+	</listeners>
+	<test name="ChromeTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="userName" value="Dipak" />
+		<parameter name="password" value="Kirti@1992" />
+		<parameter name="url" value="https://ui.cogmento.com/" />
+		<parameter name="isLocal" value="true" />
+		<classes>
+			<class name="com.abc.mytests.LoginTest" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<!-- <test thread-count="5" name="FireFoxTest" parallel="methods"> <parameter 
+		name="browser" value="firefox"/> <classes> <class name="com.abc.mytests.LoginTest"/> 
+		</classes> </test> --> <!-- Test -->
+
+
+</suite> <!-- Suite -->
